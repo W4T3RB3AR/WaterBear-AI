@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-
+#Entrance Area Rooms
 G = nx.Graph()
 G.add_node("Entrance Room 1")
 G.add_node("Entrance Room 2")
@@ -25,6 +25,7 @@ G.add_node("Entrance Save Room 1")
 G.add_node("Entrance Save Room 2")
 G.add_node("Entrance Warp Room 1")
 
+#Entrance Area Exits
 G.add_node("Exit ER1/ER4")
 G.add_node("Exit ER4/ER8")
 G.add_node("Exit ER7/ER8")
@@ -46,6 +47,7 @@ G.add_node("Exit ER15/ER17")
 G.add_node("Exit ER17/ER18")
 G.add_node("Exit ER18/EWR1")
 
+#Entrance Area Edges
 G.add_edge("Entrance Room 1", "Exit ER1/ER4")
 G.add_edge("Entrance Room 4", "Exit ER1/ER4")
 G.add_edge("Entrance Room 4", "Exit ER4/ER8")
@@ -87,7 +89,7 @@ G.add_edge("Entrance Room 18", "Exit ER17/ER18")
 G.add_edge("Entrance Room 18", "Exit ER18/EWR1")
 G.add_edge("Entrance Warp Room 1", "Exit ER18/EWR1")
 
-
+#Visualization 
 nx.draw_spring(G, with_labels=False)
 
 plt.show()
